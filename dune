@@ -1,0 +1,7 @@
+(library
+ (name year_week)
+ (public_name year_week)
+ (libraries core ppx_trace_types.runtime ppx_stable_witness.stable_witness)
+ (preprocess
+  (pps ppx_jane ppx_trace_types -compare-require-explicit-locality
+    base_quickcheck.ppx_quickcheck ppx_sexp_digest)))
